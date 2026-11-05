@@ -1,0 +1,40 @@
+{
+  "id": "./",
+  "name": "Converter — Herramientas PDF",
+  "short_name": "Converter",
+  "description": "Une, divide, comprime, convierte, edita, firma y protege PDF. Todo se procesa en tu dispositivo, sin subir archivos.",
+  "lang": "es",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f5fa",
+  "theme_color": "#5b4bff",
+  "categories": ["productivity", "utilities"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Unir PDF", "url": "./#/unir-pdf", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Comprimir PDF", "url": "./#/comprimir-pdf", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "PDF a Word", "url": "./#/pdf-a-word", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Escanear a PDF", "url": "./#/escanear-pdf", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] }
+  ],
+  "file_handlers": [
+    {
+      "action": "./",
+      "accept": {
+        "application/pdf": [".pdf"],
+        "image/jpeg": [".jpg", ".jpeg"],
+        "image/png": [".png"],
+        "image/webp": [".webp"],
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document": [".docx"],
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": [".xlsx"],
+        "application/vnd.openxmlformats-officedocument.presentationml.presentation": [".pptx"],
+        "text/html": [".html", ".htm"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Converter — Herramientas PDF gratis en tu navegador</title>
+  <meta name="description" content="Une, divide, comprime, convierte y edita PDF gratis. Todo se procesa en tu navegador: tus archivos nunca salen de tu dispositivo.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#5b4bff">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="Converter">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="#/" class="logo"><span class="logo-mark">C</span><span>Converter</span></a>
+    <div class="search" role="search">
+      <input id="q" type="search" placeholder="Buscar herramienta…" autocomplete="off" spellcheck="false" aria-label="Buscar herramienta" aria-controls="qres">
+      <kbd class="search-kbd" aria-hidden="true">/</kbd>
+      <div class="search-res" id="qres" role="listbox" hidden></div>
+    </div>
+    <nav class="topnav">
+      <button type="button" class="install-btn" id="install" hidden>Instalar app</button>
+      <a href="#/" class="all">Todas las herramientas</a>
+    </nav>
+  </header>
+
+  <main id="app"></main>
+
+  <div class="drop-overlay"><div>Suelta los archivos aquí</div></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <footer class="footer">
+    <p>🔒 Converter procesa todo en tu navegador. Tus archivos no se suben a ningún servidor.</p>
+  </footer>
+
+  <script src="vendor/pdf-lib.min.js"></script>
+  <script src="vendor/pdf.min.js"></script>
+  <script src="vendor/jszip.min.js"></script>
+  <script src="js/helpers.js"></script>
+  <script src="js/editor.js"></script>
+  <script src="js/tools.js"></script>
+  <script src="js/tools-extra.js"></script>
+  <script src="js/textlayout.js"></script>
+  <script src="js/fonts.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/docx.js"></script>
+  <script src="js/pptx.js"></script>
+  <script src="js/pdfconv.js"></script>
+  <script src="js/office.js"></script>
+  <script src="js/tools-more.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
