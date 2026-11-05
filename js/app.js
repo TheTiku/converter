@@ -672,6 +672,7 @@
     });
     // descarga automática solo si el usuario sigue en la herramienta
     if (S === session) dl();
+    requestPersistence();
   }
 
   /* ─── arrastrar archivos a la página ─── */
@@ -772,6 +773,19 @@
   });
 
   /* ───────────── aplicación instalable (PWA) ───────────── */
+  /**
+   * Pide al navegador que no borre la copia guardada de la app (ni las fuentes y datos de OCR)
+   * aunque necesite espacio. Se pide tras la primera conversión: Chrome lo concede sin preguntar
+   * a las webs que se usan; Firefox muestra un aviso, y así no aparece nada más entrar.
+   */
+  let persistAsked = false;
+  async function requestPersistence() {
+    if (persistAsked || !navigator.storage || !navigator.storage.persist) return;
+    persistAsked = true;
+    try {
+      if (!(await navigator.storage.persisted())) await navigator.storage.persist();
+    } catch (_) { /* el navegador no lo admite: no pasa nada */ }
+  }
   let launchFiles = null;
   /** Si hay archivos abiertos desde el sistema que esta herramienta acepta, se los entrega. */
   function takeLaunchFiles(tool) {
