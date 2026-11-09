@@ -3,7 +3,8 @@
 Herramientas PDF que funcionan en el navegador: unir, dividir, comprimir, convertir (Word, Excel, PowerPoint, imágenes, HTML), editar, firmar, proteger, OCR y más. Todo se procesa en el dispositivo del usuario: los archivos no se suben a ningún servidor.
 
 Es una aplicación web instalable (PWA) que funciona sin conexión.
-https://thetiku.github.io/converter/
+
+👉 Abrir la app:https://thetiku.github.io/converter/
 
 ## Probar en local
 
